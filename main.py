@@ -60,11 +60,11 @@ class Game:
                                     self.menu.isVisible = True
                             if self.board.placed_X < MAX_LIVES:
                                 self.board.placed_X += 1
-                            self.board.player_score -= 50
+                            self.board.player_score -= LOSE_POINTS
                         else:
                             print("Best Island")
                             self.state = 2
-                            self.board.player_score += 100
+                            self.board.player_score += WIN_POINTS
                             self.menu.text = "You win!"
                             self.menu.restart_text = "Click Anywhere to continue"
                             self.menu.isVisible = True

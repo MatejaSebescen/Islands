@@ -37,3 +37,5 @@ tile_score_menu = pygame.transform.scale(pygame.image.load(os.path.join("assets"
 
 MAX_LIVES = 3
 FONT_NAME = 'Calibri'
+WIN_POINTS = 100
+LOSE_POINTS = 50
