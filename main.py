@@ -9,12 +9,13 @@ class Game:
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
         pygame.display.set_caption(TITLE)
         self.clock = pygame.time.Clock()
-        self.max_lives = 3
-        self.lives = self.max_lives
+        self.lives = MAX_LIVES
         self.state = 0
 
     def new(self):
         self.req = requests.get('https://jobfair.nordeus.com/jf24-fullstack-challenge/test')
+       # file = open('islands.txt', 'r')
+        #file.read()
         self.board = Board(self.req.text)
         self.board.display_board()
         self.menu = Menu()
@@ -57,7 +58,7 @@ class Game:
                                     self.menu.text = "Game Over..."
                                     self.menu.restart_text = "Click Anywhere to restart"
                                     self.menu.isVisible = True
-                            if self.board.placed_X < self.max_lives:
+                            if self.board.placed_X < MAX_LIVES:
                                 self.board.placed_X += 1
                             self.board.player_score -= 50
                         else:
@@ -71,7 +72,7 @@ class Game:
                         print("Game Over")
                 elif self.state == 1:
                     if event.button == 1:
-                        self.lives = self.max_lives
+                        self.lives = MAX_LIVES
                         self.board.placed_X = 0
                         self.board.player_score = 0
                         self.menu.isVisible = False

@@ -61,7 +61,7 @@ class Board:
 
         pygame.font.init()
         self.text_size = TEXT_SIZE
-        self.my_font = pygame.font.SysFont('Calibri', self.text_size)
+        self.my_font = pygame.font.SysFont(FONT_NAME, self.text_size)
         self.score_text = "Score: " + str(self.player_score)
         self.text_surface = self.my_font.render(self.score_text, True, WHITE)
 
@@ -197,7 +197,7 @@ class Menu:
 
         pygame.font.init()
         self.text_size = TEXT_SIZE + 5
-        self.my_font = pygame.font.SysFont('Calibri', self.text_size)
+        self.my_font = pygame.font.SysFont(FONT_NAME, self.text_size)
 
     def draw(self, screen):
         if self.isVisible:

@@ -13,12 +13,12 @@ LVL400 = (83, 169, 64)
 LVL500 = (253, 236, 83)
 LVL600 = (233, 201, 56)
 LVL700 = (225, 127, 52)
-LVL800 = (168, 84, 47)
-LVL900 = (87, 42, 37)
+LVL800 = (172, 172, 172)
+LVL900 = (126, 126, 126)
 LVL950 = (255, 255, 255)
 BGCOLOUR = BLUE
 
-TILESIZE = 25
+TILESIZE = 30
 ROWS = 30
 COLS = 33
 WIDTH = TILESIZE * ROWS
@@ -34,3 +34,6 @@ tile_menu = pygame.transform.scale(pygame.image.load(os.path.join("assets", f"me
                                    (TILESIZE * 20, TILESIZE * 6))
 tile_score_menu = pygame.transform.scale(pygame.image.load(os.path.join("assets", f"menu.png")),
                                    (TILESIZE * 11, TILESIZE * 3 - 6))
+
+MAX_LIVES = 3
+FONT_NAME = 'Calibri'
